@@ -1,0 +1,31 @@
+Node
+
+in real work, will use in frontend+server
+
+Ajax will apply service调用服务
+
+work flow:
+back server layer -> api layer -> front
+
+REPL -> can be used as test
+
+
+Js -> single threading execution
+in webserver it can be:
+Asynchronous tasks &. synchronous tasks
+
+Example:
+Js give button onclick（）status
+the it will save the event to event loop
+
+callback 回调函数
+
+—————————————————
+
+How to use module?
+
+require(path)
+
+//the path is a js module
+//module file:
+Module exports : return as a require
