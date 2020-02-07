@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        function getUserName() {
+            // axios is ajax lib
+            axios.get('./get_username').then(function(result){
+                console.log(result);
+
+                document.getElementById('user_name').innerText = result.data.name
+            })
+        }
+
+        function getStudents() {
+            axios.get('./get_students').then(function (result) {
+                var students = result.data;
+
+                var ul = document.getElementById("student_list");
+
+                for (let student of students){
+                    var li = document.createElement('li');
+
+                    li.innerText = student.name;
+                    ul.appendChild(li);
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+    <button onclick="getUserName()">get username, ajax request</button>
+    <span id="user_name"></span>
+    <hr/>
+    <button onclick="getStudents()">get students list</button>
+    <ul id = "student_list">
+
+    </ul>
+</body>
+</html>
