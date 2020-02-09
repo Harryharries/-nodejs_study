@@ -28,6 +28,18 @@
                 }
             })
         }
+
+        function registerUser() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            axios.post('/register_user', {
+                username: username,
+                password: password
+            }).then(function(result){
+                console.log(result.data)
+            })
+        }
     </script>
 </head>
 <body>
@@ -38,5 +50,12 @@
     <ul id = "student_list">
 
     </ul>
+
+    <hr/>
+    <div>
+        username:<input id = "username" type="text"/><br/>
+        password:<input id = "password" type="text"/><br/>
+        <button onclick="registerUser()">submit</button>
+    </div>
 </body>
 </html>

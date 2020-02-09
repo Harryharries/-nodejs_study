@@ -29,3 +29,10 @@ require(path)
 //the path is a js module
 //module file:
 Module exports : return as a require
+
+const express = require('express');
+// express give a service side app
+const app = express();
+
+-------------------------
+ajax:
