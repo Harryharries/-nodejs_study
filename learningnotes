@@ -36,3 +36,6 @@ const app = express();
 
 -------------------------
 ajax:
+
+//mid key it will excute before get/post
+app.use()
